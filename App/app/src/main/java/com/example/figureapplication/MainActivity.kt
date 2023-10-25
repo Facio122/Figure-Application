@@ -243,6 +243,7 @@ class MainActivity : AppCompatActivity() {
 
         table.addView(tr)
         indexTable(table)
+        ClickForTrHandler(tr, table)
     }
 
     private fun sortFigures(table: TableLayout)
@@ -296,5 +297,6 @@ class MainActivity : AppCompatActivity() {
         field.text = String.format("%.2f",fieldVal)
 
         table.addView(tr)
+        ClickForTrHandler(tr, table)
     }
 }
