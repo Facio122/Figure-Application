@@ -4,4 +4,8 @@
         android:id="@+id/removeView"
         android:title="Remove">
     </item>
+    <item
+        android:id="@+id/duplicate"
+        android:title="Duplicate">
+    </item>
 </menu>

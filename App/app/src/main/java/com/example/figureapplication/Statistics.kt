@@ -9,6 +9,7 @@ import com.example.figureapplication.ui.theme.Figure
 
 @Suppress("DEPRECATION")
 class Statistics : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.statistics)
@@ -29,6 +30,8 @@ class Statistics : AppCompatActivity() {
             }
         }
     }
+
+
 
 
     private fun initToolbar (): androidx.appcompat.widget.Toolbar {

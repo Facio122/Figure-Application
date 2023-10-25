@@ -25,5 +25,11 @@
         android:id="@+id/clear"
         android:title="Clear">
     </item>
+    <item
+        android:id="@+id/GoToEditActivity"
+        android:title="Settings"
+        android:icon="@mipmap/ic_settings"
+        app:showAsAction="always">
+    </item>
 
 </menu>

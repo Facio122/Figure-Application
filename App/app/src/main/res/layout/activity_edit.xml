@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/editToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:titleTextColor="@color/white"
+        app:menu="@menu/statistic_toolbar_menu"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-1dp" />
+
+    <TextView
+        android:id="@+id/maxText"
+        android:layout_width="164dp"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:text="Maximum side value"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/numOfFiguresText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minText"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/numOfFiguresText"
+        android:layout_width="164dp"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:text="Number of figures"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minText"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/minText"
+        android:layout_width="164dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="124dp"
+        android:gravity="center_vertical"
+        android:text="Minimum side value"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editToolbar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="181dp"
+        android:layout_height="52dp"
+        android:text="Settings"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/minText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editToolbar"
+        app:layout_constraintVertical_bias="0.39" />
+
+    <SeekBar
+        android:id="@+id/minSlider"
+        style="@android:style/Widget.DeviceDefault.SeekBar"
+        android:layout_width="258dp"
+        android:layout_height="34dp"
+        android:min="1"
+        android:max="25"
+        app:layout_constraintBottom_toTopOf="@+id/maxText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/minText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/maxSlider"
+        android:layout_width="258dp"
+        android:layout_height="34dp"
+        android:min="1"
+        android:max="25"
+        app:layout_constraintBottom_toTopOf="@+id/numOfFiguresText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/maxText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/qantSlider"
+        android:layout_width="258dp"
+        android:layout_height="34dp"
+        android:min="1"
+        android:max="30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numOfFiguresText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/minValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/minSlider"
+        app:layout_constraintEnd_toStartOf="@+id/minSlider"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/minSlider" />
+
+    <TextView
+        android:id="@+id/maxValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/maxSlider"
+        app:layout_constraintEnd_toStartOf="@+id/maxSlider"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/maxSlider" />
+
+    <TextView
+        android:id="@+id/numValueText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="@+id/qantSlider"
+        app:layout_constraintEnd_toStartOf="@+id/qantSlider"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/qantSlider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
